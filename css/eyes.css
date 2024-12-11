@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.eyes {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.eyes .eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.5), inset 0 0 15px #205179;
+}
+
+.eyes .eye::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  background: #205179;
+  border: 10px solid #2196f3;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.eyes .eye::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  filter: blur(2px);
+  border-radius: 50%;
+}
+
+.eyes button {
+  position: absolute;
+  left: 0;
+  top: -20%;
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.1s;
+  border: none;
+}
+
+.eyes button:hover {
+  background: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.1);
+}
